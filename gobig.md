@@ -181,17 +181,39 @@ token机制：是一种在客户端和服务端之间传递身份信息的方式
 任务大概时间：1.5h
 输出/检查项：1. Postman安装截图；2. 3个不同类型接口请求的创建截图、响应结果截图；3. 1份简单的接口测试用例文档及执行结果。
 
-
-
 ## 4.3. 任务名：开发-虚拟环境管理（venv+conda）自学实操
 
 任务详情：学习虚拟环境的作用（环境隔离、依赖管理），使用venv创建、激活、退出虚拟环境，完成依赖导出/导入；安装并配置conda，使用conda创建虚拟环境、安装/卸载包，完成两种虚拟环境的实操练习。
 任务大概时间：1.5h
 输出/检查项：1. venv、conda虚拟环境创建、激活截图；2. 依赖导出/导入的文件及操作截图；
 
+虚拟环境用来实现项目之间不同语言版本的差异
 
+> 安装虚拟环境
 
+![image-20260327145025060](C:\Users\sys\AppData\Roaming\Typora\typora-user-images\image-20260327145025060.png)
 
+> 启动虚拟环境
+
+![image-20260327145157716](C:\Users\sys\AppData\Roaming\Typora\typora-user-images\image-20260327145157716.png)
+
+在虚拟环境中安装的依赖只会影响当前虚拟环境
+
+> 依赖导出
+
+![image-20260327150532631](C:\Users\sys\AppData\Roaming\Typora\typora-user-images\image-20260327150532631.png)
+
+> 安装conda和虚拟环境
+
+![image-20260327152721410](C:\Users\sys\AppData\Roaming\Typora\typora-user-images\image-20260327152721410.png)
+
+>conda包安装
+
+![image-20260327154906572](C:\Users\sys\AppData\Roaming\Typora\typora-user-images\image-20260327154906572.png)
+
+>删除包
+
+![image-20260327155043458](C:\Users\sys\AppData\Roaming\Typora\typora-user-images\image-20260327155043458.png)
 
 ## 4.4任务名：基础-RESTful风格API交互与状态码自学掌握
 
@@ -199,9 +221,15 @@ token机制：是一种在客户端和服务端之间传递身份信息的方式
 任务大概时间：1.5h
 输出/检查项：1. API交互知识点笔记（重点记录四种请求方式、核心状态码）；2. 完成3个API请求示例的分析文档（标注请求方式、状态码及含义）。
 
+RESTful API设计原则为 无状态：每一次请求都相对独立；统一接口：采用http四个请求 GET、PUT、DELETE、POST；资源导向：所有资源都采用URI统一标识；可缓存性：所有响应都可以标注为可响应或不可响应
 
+GET: 获取资源，POST: 向服务器提供资源, DELETE: 删除服务器资源，PUT：更新服务器资源
 
+有幂等性：GET，DELETE，PUT
 
+安全性：GET
+
+200为HTTP请求和获取回应成功，400为当前请求无法被[服务器](https://baike.baidu.com/item/服务器/100571?fromModule=lemma_inlink)理解，一般为HTTP请求编写错误；401为未通过认证，由于请求头未携带认证信息或认证失败导致；403为服务器成功理解了HTTP请求但不接受，可能原因为用户权限不够或其他地区原因；500为在请求时服务器完全理解了请求但在处理请求时发生了无法预料的错误
 
 # Model 5 数据库基础
 
